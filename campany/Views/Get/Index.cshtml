@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<Employee>
+<h1>employees</h1>
+
+<table class="table table-info style=" width: 18rem;">
+    <thead>
+    <tr>      
+        <th>name </th>
+        <th>
+            crud
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach(var emp in Model)
+        {  
+            <tr>
+        <td>@emp.name </td>
+       
+         <td>
+                    <a href="/get/getbyid/@emp.id" >
+                        <i class="fa-solid fa-circle-info"></i>
+                    </a> //
+                    <a href="/get/Edit/@emp.id">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a> // 
+                    <a href="/get/delete/@emp.id">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+         </td>
+       
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+<a class="btn btn-primary" href="/add/add">Add_employee</a>
+
+
+
+
+

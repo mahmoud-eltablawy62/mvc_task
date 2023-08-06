@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+@model addV
+<h1>Add</h1>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="name" class="form-label"></label>
+        <input asp-for="name" class="form-control" >
+        <span class="text-danger" asp-validation-for="name"></span>
+    </div>
+    
+    <div class="mb-3">
+        <label  asp-for="salary"  class="form-label"></label>
+        <input   asp-for="salary" class="form-control" >
+        <span class="text-danger" asp-validation-for="salary"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="age" class="form-label"></label>
+        <input  asp-for="age"  class="form-control" >
+        <span class="text-danger" asp-validation-for="age"></span>
+    </div>
+    <div class="mb-3">
+        <label  asp-for="password" class="form-label"></label>
+        <input  asp-for="password" class="form-control" >
+        <span class="text-danger" asp-validation-for="password"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="confirm_password" class="form-label"></label>
+        <input asp-for="confirm_password" class="form-control">
+        <span class="text-danger" asp-validation-for="confirm_password"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

@@ -1,0 +1,21 @@
+﻿@model office
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+
+<form asp-controller="Office" asp-action="Edit" method="post">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <input class="form-control" asp-for="Location">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

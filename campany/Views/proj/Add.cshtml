@@ -1,0 +1,22 @@
+﻿@model project
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+@model project
+<h1>Edit</h1>
+
+
+<form asp-controller="proj" asp-action="Edit" method="post">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input class="form-control" asp-for="Description">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+

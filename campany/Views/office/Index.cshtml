@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model List<office>
+<h1>Office</h1>
+
+<table class="table table-info style=" width: 18rem;">
+    <thead>
+        <tr>
+            <th> name </th>
+            <th>
+                crud
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var off in Model)
+        {
+            <tr>
+                <td>@off.Name</td>
+
+                <td>
+                    <a href="/office/getbyid/@off.Id">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </a> //
+                    <a href="/office/edit/@off.Id">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a> //
+                    <a href="/office/delete/@off.Id">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+<a  href="/office/add" class="btn btn-primary" >Add_office</a>
+

@@ -1,0 +1,34 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "add";
+}
+
+<h1>Add new student</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="name" class="form-label"></label>
+        <input asp-for="name" class="form-control" >
+    </div>
+    
+    <div class="mb-3">
+        <label  asp-for="salary"  class="form-label"></label>
+        <input   asp-for="salary" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label asp-for="age" class="form-label"></label>
+        <input  asp-for="age"  class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label  asp-for="password" class="form-label"></label>
+        <input  asp-for="password" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label asp-for="off_ID" class="form-label">Department</label>
+        <select class="form-select" asp-for="off_ID" asp-items="ViewBag.offs">
+            <option selected>Open this select menu</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
